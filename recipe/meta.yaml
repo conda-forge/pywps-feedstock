@@ -1,4 +1,4 @@
-{% set version = "4.0.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: pywps
@@ -6,28 +6,31 @@ package:
 
 source:
   url: https://github.com/geopython/pywps/archive/{{ version }}.tar.gz
-  sha256: ed3ce96310066b2b553e8cab4a5090905c09ba5e9d845381ff8617936898a40d
+  sha256: adbc671d4a04cdc960c72167cebe96d2ffd89a5f74e3ccd74c2e26649f41e090
 
 build:
   number: 1000
-  skip: True  # [win or py37]
   # self.async = False is invalid syntax in py37, remove the skip in a future version.
-  skip: True  # [py>36]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: True  # [win or py>36]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
     - python
     - owslib
     - jsonschema
-    - werkzeug
     - lxml
+    - werkzeug
     - sqlalchemy
-    - flufl.enum  # [py27]
     - python-dateutil
+    - requests
+    - jinja2
+    - pathlib
+    - flufl.enum  # [py27]
+
 test:
   imports:
     - pywps
@@ -35,6 +38,7 @@ test:
 about:
   home: http://pywps.org/
   license: MIT
+  license_file: LICENSE.txt
   summary: 'PyWPS (Python Web Processing Service) is an implementation of the Web processing Service standard from Open Geospatial Consortium.'
 
 extra:
