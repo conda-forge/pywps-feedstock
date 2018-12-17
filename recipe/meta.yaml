@@ -10,24 +10,27 @@ source:
 
 build:
   number: 1000
-  skip: True  # [win or py37]
   # self.async = False is invalid syntax in py37, remove the skip in a future version.
-  skip: True  # [py>36]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: True  # [win or py>36]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
     - python
     - owslib
     - jsonschema
-    - werkzeug
     - lxml
+    - werkzeug
     - sqlalchemy
-    - flufl.enum  # [py27]
     - python-dateutil
+    - requests
+    - jinja2
+    - pathlib
+    - flufl.enum  # [py27]
+
 test:
   imports:
     - pywps
@@ -35,6 +38,7 @@ test:
 about:
   home: http://pywps.org/
   license: MIT
+  license_file: LICENSE.txt
   summary: 'PyWPS (Python Web Processing Service) is an implementation of the Web processing Service standard from Open Geospatial Consortium.'
 
 extra:
