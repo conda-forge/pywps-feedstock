@@ -1,4 +1,4 @@
-{% set version = "4.2.1" %}
+{% set version = "4.2.2" %}
 
 package:
   name: pywps
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/geopython/pywps/archive/{{ version }}.tar.gz
-  sha256: b9075614f96ed1a5666ff24dadcb5c5ba0d2d63169e6e0cd92b85a3d306fe096
+  sha256: 83098a1fb72f28b6fe775c624e0c2dd3cbc077e3f2c04ae805eedb9e91365098
 
 build:
-  number: 1000
+  number: 0
   # self.async = False is invalid syntax in py37, remove the skip in a future version.
   skip: True  # [win or py>36]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
