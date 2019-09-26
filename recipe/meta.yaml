@@ -10,8 +10,7 @@ source:
 
 build:
   number: 0
-  # self.async = False is invalid syntax in py37, remove the skip in a future version.
-  skip: True  # [win or py>36]
+  skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
