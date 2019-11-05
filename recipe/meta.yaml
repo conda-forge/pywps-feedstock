@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/geopython/pywps/archive/{{ version }}.tar.gz
-  sha256: 5eca0fe843859192e0bd427ac8c73e63c5f4fd9098ccc9653ffa1720f875acba
+  sha256: c01777709faa4747674c6ee4501a348e91379bfe330c895a68aa69c661eb38d7
 
 build:
   number: 0
