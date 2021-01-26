@@ -19,6 +19,7 @@ requirements:
     - pip
   run:
     - python
+    - six
     - owslib
     - jsonschema
     - lxml
