@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
   run:
-    - python
+    - python >=3.6
     - six
     - owslib
     - jsonschema
@@ -28,8 +28,6 @@ requirements:
     - python-dateutil
     - requests
     - jinja2
-    - pathlib
-    - flufl.enum  # [py27]
 
 test:
   imports:
