@@ -19,7 +19,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - six
     - owslib
     - jsonschema
     - lxml
