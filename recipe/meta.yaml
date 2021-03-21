@@ -27,6 +27,7 @@ requirements:
     - python-dateutil
     - requests
     - jinja2
+    - humanize
 
 test:
   imports:
