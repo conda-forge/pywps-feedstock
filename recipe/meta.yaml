@@ -1,4 +1,4 @@
-{% set version = "4.4.2" %}
+{% set version = "4.4.3" %}
 
 package:
   name: pywps
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/geopython/pywps/archive/{{ version }}.tar.gz
-  sha256: ee21e06844e551f9bcd1ca9952a87b46a072b15be1a6ec613bfde3808fa570ca
+  sha256: d97d6445a24b12840f2c8aa0afe7e456e514632d909517208e0c3ef2f1ef8caa
 
 build:
   number: 0
