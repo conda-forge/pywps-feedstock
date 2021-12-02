@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - owslib
     - jsonschema
     - lxml
@@ -28,6 +28,7 @@ requirements:
     - requests
     - jinja2
     - humanize
+    - fiona
     - markupsafe
     - sphinx
     - docutils
