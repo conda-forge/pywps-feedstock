@@ -19,19 +19,20 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - owslib
+    - docutils
+    - fiona
+    - humanize
+    - jinja2
     - jsonschema
     - lxml
-    - werkzeug
-    - sqlalchemy
-    - python-dateutil
-    - requests
-    - jinja2
-    - humanize
-    - fiona
     - markupsafe
+    - owslib
+    - python-dateutil
+    - python-geotiff
+    - requests
     - sphinx
-    - docutils
+    - sqlalchemy
+    - werkzeug
 
 test:
   imports:
