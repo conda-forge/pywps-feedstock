@@ -37,12 +37,19 @@ requirements:
 test:
   imports:
     - pywps
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://pywps.org/
   license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
   summary: PyWPS (Python Web Processing Service) is an implementation of the Web processing Service standard from Open Geospatial Consortium.
+  doc_url: https://pywps.org/
+  dev_url: https://github.com/geopython/PyWPS
 
 extra:
   recipe-maintainers:
