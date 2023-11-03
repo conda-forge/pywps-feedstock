@@ -1,11 +1,11 @@
-About pywps
-===========
+About pywps-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywps-feedstock/blob/main/LICENSE.txt)
 
 Home: http://pywps.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywps-feedstock/blob/main/LICENSE.txt)
 
 Summary: PyWPS (Python Web Processing Service) is an implementation of the Web processing Service standard from Open Geospatial Consortium.
 
