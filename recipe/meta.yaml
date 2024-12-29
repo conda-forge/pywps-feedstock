@@ -9,16 +9,16 @@ source:
   sha256: 7aeb749d788fa7795fb0fe76ee76096a4606251f56fa211e4d72b8fc7b7323a2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - docutils
     - fiona
     - humanize
@@ -39,6 +39,7 @@ test:
     - pywps
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
