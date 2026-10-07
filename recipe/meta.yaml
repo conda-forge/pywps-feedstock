@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools >=80.0
+    - wheel
   run:
     - python >={{ python_min }}
     - humanize >=4.5.0
