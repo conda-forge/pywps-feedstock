@@ -1,5 +1,5 @@
 {% set name = "pywps" %}
-{% set version = "4.8.0" %}
+{% set version = "4.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c535009b1e92ca2b7d14951d76308759db0c6149e1b1a2b7249e6bf667d86431
+  sha256: a4f4eaa205cf3fd2482750e01e9c4d59b6ee24e888c5f5f4cc180cc26938007e
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools >=80.0
+    - wheel
   run:
     - python >={{ python_min }}
     - humanize >=4.5.0
